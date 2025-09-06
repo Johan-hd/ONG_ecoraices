@@ -1,0 +1,142 @@
+/* assets/css/style.css */
+
+/* ==========================================================================
+   1. VARIABLES Y ESTILOS GLOBALES
+   ========================================================================== */
+
+/* :root te permite declarar variables globales que puedes reutilizar en todo el archivo.
+   Esto es genial para mantener una paleta de colores consistente y fácil de modificar. */
+:root {
+    --bs-primary: #285430;     /* principal */
+    --bs-secondary: #5F8D4E;  /* secundario */
+    --bs-light: #E5D9B6;      /* claro */
+    --bs-dark: #1B2F21;       /* oscuro */
+    --accent-color: #A4BE7B;  /* acento */
+}
+body {
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+}
+
+/* ==========================================================================
+   2. PERSONALIZACIÓN DE COMPONENTES DE BOOTSTRAP
+   ========================================================================== */
+
+/* "sobrescribiendo" las clases de Bootstrap para que usen tus colores personalizados.
+   El !important asegura que el estilo tenga prioridad sobre el de Bootstrap y sobre todo en el proyecto.  */
+.bg-primary { background-color: var(--bs-primary) !important; }
+.text-primary { color: var(--bs-primary) !important; }
+
+/*  apariencia de los botones primarios y su estado :hover. */
+.btn-primary { 
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+.btn-primary:hover {
+    background-color: #1B2F21; 
+    border-color: #1B2F21;
+}
+
+.btn-secondary {
+    background-color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
+}
+
+/* ==========================================================================
+   3. ESTILOS DE SECCIONES Y COMPONENTES
+   ========================================================================== */
+
+/* Estilo para el banner principal de la página de inicio.
+   El linear-gradient crea una capa oscura semitransparente sobre la imagen de fondo,
+   lo que hace que el texto blanco sea más fácil de leer. 
+   LA HACE MÁS OPACA.
+   */
+.hero-section {
+    min-height: 70vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/HeroPrincipal_2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Aqui lo mismo pero para el banner de la página "Nosotros".
+   Usar una clase diferente permite tener imágenes de fondo distintas por página. */
+.hero-nosotros {
+    min-height: 50vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/HeroPrincipal_1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+/* efecto de elevación a las tarjetas al pasar el mouse.*/
+.card {
+    border: none;
+    transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+
+footer a:hover {
+    color: var(--accent-color) !important;
+}
+
+/* ==========================================================================
+   4. ESTILOS DE LA GALERÍA INTERACTIVA
+   ========================================================================== */
+
+.card-link {
+    text-decoration: none;
+    color: inherit; /* El texto hereda el color normal. */
+}
+
+/* efecto de sombra en las tarjetas-enlace al pasar el mouse. */
+.card-link .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* Efecto visual para las imágenes de la galería al pasar el mouse. */
+.gallery-item img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* La imagen se agranda un poco. */
+    opacity: 0.8; /* y se vuelve ligeramente opaca. */
+}
+
+/* Estilos para la capa oscura que aparece sobre la imagen en la galería. */
+.gallery-item .overlay {
+    position: absolute; /* Se posiciona sobre la imagen. */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Inicialmente es invisible. */
+    transition: opacity 0.3s ease; /* Transición suave. */
+    border-radius: .25rem;
+}
+
+/* Al pasar el mouse, la capa se vuelve visible. */
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item .overlay button {
+    border: 1px solid white;
+}
+
+/* ==========================================================================
+   5. ESTILOS PARA EL MENÚ DESPLEGABLE
+   ========================================================================== */
+@media (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+}
