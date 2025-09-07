@@ -36,8 +36,8 @@
                             Aprende
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/restauracionEcologica_learn.html">Restauración Ecológica</a></li>
-                            <li><a class="dropdown-item" href="/rehabilitacionDeFauna.html">Rehabilitación de Fauna</a></li>
+                            <li><a class="dropdown-item" href="./restauracionEcologica_learn.html">Restauración Ecológica</a></li>
+                            <li><a class="dropdown-item" href="./rehabilitacionDeFauna.html">Rehabilitación de Fauna</a></li>
                         </ul>
                     </li>
 
@@ -49,12 +49,13 @@
             </div>
         </div>
     </nav>
+
     <header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
         <div class="container">
             <h1 class="display-3 fw-bold">¡Donde nacen las raíces florecen los cambios!</h1>
             <p class="lead">Protegemos la biodiversidad de Colombia a través de la acción comunitaria y la educación ambiental.</p>
             
-            <a href="/contacto.html" class="btn btn-primary btn-lg mt-4">Haz una donación</a>
+            <a href="./contacto.html" class="btn btn-primary btn-lg mt-4">Haz una donación</a>
         </div>
     </header>
         
@@ -192,43 +193,65 @@
     </footer>
 
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="loginModalLabel">Acceso / Registro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form action="login.html" method="get">
-                <h6 class="mb-3">Iniciar Sesión</h6>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="username" required>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Acceso</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" required>
+                <div class="modal-body">
+                    <form action="login.html" method="get">
+                    <h6 class="mb-3">Iniciar Sesión</h6>
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuario</label>
+                        <input type="text" class="form-control" id="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                    </form>
+                    <hr>
+                    <div class="text-center">
+                        <p class="mb-0">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-primary w-100">Ingresar</button>
-            </form>
-            <hr>
-            <form>
-                <h6 class="mb-3">¿No tienes cuenta? Regístrate</h6>
-                <div class="mb-3">
-                    <label for="reg-email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="reg-email" required>
-                </div>
-                 <div class="mb-3">
-                    <label for="reg-password" class="form-label">Crea una Contraseña</label>
-                    <input type="password" class="form-control" id="reg-password" required>
-                </div>
-                <button type="submit" class="btn btn-secondary w-100">Registrarme</button>
-            </form>
-          </div>
+            </div>
         </div>
-      </div>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="successModalLabel">¡Registro Exitoso!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Tu cuenta ha sido creada correctamente. ¡Bienvenido a EcoRaíces!</p> 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Iniciar Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            if (urlParams.get('registro') === 'exitoso') {
+                // ¡CAMBIO AQUÍ! Ahora mostramos el modal de éxito.
+                var successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+            }
+        });
+    </script>
 </body>
 </html>
