@@ -1,198 +1,487 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRaíces | Sobre Nosotros</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EcoRaíces | Sobre Nosotros</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
 
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">EcoRaíces</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Conócenos</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="nosotros.html">Sobre Nosotros</a></li>
-                            <li><a class="dropdown-item" href="proyectos.html">Nuestros Proyectos</a></li>
-                            <li><a class="dropdown-item" href="galeria.html">Galería</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Aprende</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./restauracionEcologica_learn.html">Restauración Ecológica</a></li>
-                            <li><a class="dropdown-item" href="./rehabilitacionDeFauna.html">Rehabilitación de Fauna</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                </ul>
-                <button class="btn btn-outline-light ms-lg-3" data-bs-toggle="modal" data-bs-target="#loginModal">Acceder</button>
-            </div>
-        </div>
-    </nav>
+    <!-- Script para manejar sesión y mostrar enlaces según el tipo de usuario -->
+    <script src="assets/js/sessionManager.js"></script>
 
-    <header class="hero-nosotros text-center text-white d-flex align-items-center justify-content-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Somos los guardianes de la biodiversidad</h1>
-            <p class="lead">Nacimos de la convicción de que el cambio real comienza desde la raíz.</p>
-        </div>
-    </header>
-
-    <main>
-        <section class="container my-5 py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <img src="assets/images/FundadoresPlanificando.jpg" class="img-fluid rounded shadow" alt="Fundadores de EcoRaíces planificando sobre un mapa">
-                </div>
-                <div class="col-lg-6 mt-4 mt-lg-0">
-                    <h2>Nuestra Historia</h2>
-                    <p>EcoRaíces nació en 2018, de la unión de un grupo de biólogos, líderes comunitarios y soñadores que compartían una profunda preocupación por la creciente pérdida de biodiversidad en las zonas rurales de Colombia. Cansados de ser espectadores, decidimos convertir la preocupación en acción. Comenzamos con un pequeño proyecto de reforestación en nuestra comunidad local, plantando no solo árboles, sino la semilla de un movimiento que hoy trabaja incansablemente por un futuro más verde y justo.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="bg-dark text-light py-5">
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h3 class="text-primary">Nuestra Misión</h3>
-                        <p>Trabajar por la protección integral de la biodiversidad, promoviendo la restauración ecológica, el respeto por todas las formas de vida y la reconexión consciente entre la humanidad y su entorno natural, empoderando a las comunidades para que sean guardianas de su propio territorio.</p>
-                    </div>
+                <a class="navbar-brand fw-bold" href="index.html">EcoRaíces</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                >Conócenos</a
+                            >
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="nosotros.html"
+                                        >Sobre Nosotros</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="proyectos.html"
+                                        >Nuestros Proyectos</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="galeria.html"
+                                        >Galería</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                >Aprende</a
+                            >
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="./restauracionEcologica_learn.html"
+                                        >Restauración Ecológica</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="./rehabilitacionDeFauna.html"
+                                        >Rehabilitación de Fauna</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html"
+                                >Contacto</a
+                            >
+                        </li>
+                    </ul>
+                    <button
+                        class="btn btn-outline-light ms-lg-3"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginModal"
+                    >
+                        Acceder
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <header
+            class="hero-nosotros text-center text-white d-flex align-items-center justify-content-center"
+        >
+            <div class="container">
+                <h1 class="display-4 fw-bold">
+                    Somos los guardianes de la biodiversidad
+                </h1>
+                <p class="lead">
+                    Nacimos de la convicción de que el cambio real comienza
+                    desde la raíz.
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <section class="container my-5 py-5">
+                <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h3 class="text-primary">Nuestra Visión</h3>
-                        <p>Soñamos con una Colombia donde las comunidades y la naturaleza prosperen en armonía. Un futuro donde los ecosistemas estratégicos estén protegidos, la fauna silvestre corra libre y cada ciudadano actúe como un agente de cambio consciente del valor invaluable de nuestro patrimonio natural.</p>
+                        <img
+                            src="assets/images/FundadoresPlanificando.jpg"
+                            class="img-fluid rounded shadow"
+                            alt="Fundadores de EcoRaíces planificando sobre un mapa"
+                        />
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                        <h2>Nuestra Historia</h2>
+                        <p>
+                            EcoRaíces nació en 2018, de la unión de un grupo de
+                            biólogos, líderes comunitarios y soñadores que
+                            compartían una profunda preocupación por la
+                            creciente pérdida de biodiversidad en las zonas
+                            rurales de Colombia. Cansados de ser espectadores,
+                            decidimos convertir la preocupación en acción.
+                            Comenzamos con un pequeño proyecto de reforestación
+                            en nuestra comunidad local, plantando no solo
+                            árboles, sino la semilla de un movimiento que hoy
+                            trabaja incansablemente por un futuro más verde y
+                            justo.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="container text-center my-5 py-5">
-            <h2>Nuestros Valores</h2>
-            <hr class="w-25 mx-auto mb-5">
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm p-4">
-                        <h5>Compromiso</h5>
-                        <p>Actuamos con pasión y dedicación inquebrantable por la defensa de la vida.</p>
+            <section class="bg-dark text-light py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 mb-4 mb-lg-0">
+                            <h3 class="text-primary">Nuestra Misión</h3>
+                            <p>
+                                Trabajar por la protección integral de la
+                                biodiversidad, promoviendo la restauración
+                                ecológica, el respeto por todas las formas de
+                                vida y la reconexión consciente entre la
+                                humanidad y su entorno natural, empoderando a
+                                las comunidades para que sean guardianas de su
+                                propio territorio.
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 class="text-primary">Nuestra Visión</h3>
+                            <p>
+                                Soñamos con una Colombia donde las comunidades y
+                                la naturaleza prosperen en armonía. Un futuro
+                                donde los ecosistemas estratégicos estén
+                                protegidos, la fauna silvestre corra libre y
+                                cada ciudadano actúe como un agente de cambio
+                                consciente del valor invaluable de nuestro
+                                patrimonio natural.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm p-4">
-                        <h5>Colaboración</h5>
-                        <p>Creemos en el poder de las alianzas; solos vamos rápido, pero juntos llegamos más lejos.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm p-4">
-                        <h5>Transparencia</h5>
-                        <p>Gestionamos nuestros recursos con total honestidad y rendimos cuentas a quienes nos apoyan.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm p-4">
-                        <h5>Respeto</h5>
-                        <p>Honramos el conocimiento ancestral de las comunidades y el valor intrínseco de cada ser vivo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="bg-light py-5">
-            <div class="container">
-                <h2 class="text-center mb-5">Conoce a Nuestro Equipo</h2>
+            <section class="container text-center my-5 py-5">
+                <h2>Nuestros Valores</h2>
+                <hr class="w-25 mx-auto mb-5" />
                 <div class="row g-4">
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <img src="assets/images/DirectoraEjecutiva.jpg" class="card-img-top" alt="Foto de la Directora Ejecutiva">
-                            <div class="card-body">
-                                <h5 class="card-title">Mariana Vélez</h5>
-                                <p class="card-text text-muted">Directora Ejecutiva</p>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm p-4">
+                            <h5>Compromiso</h5>
+                            <p>
+                                Actuamos con pasión y dedicación inquebrantable
+                                por la defensa de la vida.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm p-4">
+                            <h5>Colaboración</h5>
+                            <p>
+                                Creemos en el poder de las alianzas; solos vamos
+                                rápido, pero juntos llegamos más lejos.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm p-4">
+                            <h5>Transparencia</h5>
+                            <p>
+                                Gestionamos nuestros recursos con total
+                                honestidad y rendimos cuentas a quienes nos
+                                apoyan.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 shadow-sm p-4">
+                            <h5>Respeto</h5>
+                            <p>
+                                Honramos el conocimiento ancestral de las
+                                comunidades y el valor intrínseco de cada ser
+                                vivo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-light py-5">
+                <div class="container">
+                    <h2 class="text-center mb-5">Conoce a Nuestro Equipo</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card text-center">
+                                <img
+                                    src="assets/images/DirectoraEjecutiva.jpg"
+                                    class="card-img-top"
+                                    alt="Foto de la Directora Ejecutiva"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">Mariana Vélez</h5>
+                                    <p class="card-text text-muted">
+                                        Directora Ejecutiva
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card text-center">
+                                <img
+                                    src="assets/images/BiologoDeCampo.jpg"
+                                    class="card-img-top"
+                                    alt="Foto del Biólogo de Campo"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">Javier Rojas</h5>
+                                    <p class="card-text text-muted">
+                                        Biólogo de Campo
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card text-center">
+                                <img
+                                    src="assets/images/CoordinadoraDeComunidades.jpg"
+                                    class="card-img-top"
+                                    alt="Foto de la Coordinadora de Comunidades"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">Sofia Torres</h5>
+                                    <p class="card-text text-muted">
+                                        Coordinadora de Comunidades
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <img src="assets/images/BiologoDeCampo.jpg" class="card-img-top" alt="Foto del Biólogo de Campo">
-                            <div class="card-body">
-                                <h5 class="card-title">Javier Rojas</h5>
-                                <p class="card-text text-muted">Biólogo de Campo</p>
-                            </div>
-                        </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-dark text-light pt-5 pb-4">
+            <div class="container text-center text-md-start">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold text-primary">
+                            EcoRaíces
+                        </h5>
+                        <p>
+                            EcoRaíces es una organización sin ánimo de lucro
+                            dedicada a proteger la biodiversidad colombiana
+                            mediante acciones concretas de restauración,
+                            educación ambiental y defensa de la fauna silvestre.
+                            Creemos que el cambio sostenible comienza en lo
+                            profundo: en las raíces de nuestras comunidades, del
+                            territorio y de nuestra conciencia ecológica.
+                        </p>
                     </div>
-                    <div class="col-md-6 col-lg-4">
-                        <div class="card text-center">
-                            <img src="assets/images/CoordinadoraDeComunidades.jpg" class="card-img-top" alt="Foto de la Coordinadora de Comunidades">
-                            <div class="card-body">
-                                <h5 class="card-title">Sofia Torres</h5>
-                                <p class="card-text text-muted">Coordinadora de Comunidades</p>
-                            </div>
-                        </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold">
+                            Acceso rápido
+                        </h5>
+                        <p>
+                            <a
+                                href="nosotros.html"
+                                class="text-light text-decoration-none"
+                                >Conócenos</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="proyectos.html"
+                                class="text-light text-decoration-none"
+                                >Proyectos</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="contacto.html"
+                                class="text-light text-decoration-none"
+                                >Contáctanos</a
+                            >
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold">
+                            Nuestras Redes
+                        </h5>
+                        <p>
+                            <a href="#" class="text-light text-decoration-none"
+                                >Instagram</a
+                            >
+                        </p>
+                        <p>
+                            <a href="#" class="text-light text-decoration-none"
+                                >Tiktok</a
+                            >
+                        </p>
+                        <p>
+                            <a href="#" class="text-light text-decoration-none"
+                                >Facebook</a
+                            >
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </footer>
 
-    </main>
-    
-    <footer class="bg-dark text-light pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary">EcoRaíces</h5>
-                    <p>EcoRaíces es una organización sin ánimo de lucro dedicada a proteger la biodiversidad colombiana mediante acciones concretas de restauración, educación ambiental y defensa de la fauna silvestre. Creemos que el cambio sostenible comienza en lo profundo: en las raíces de nuestras comunidades, del territorio y de nuestra conciencia ecológica.</p>
-                </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold">Acceso rápido</h5>
-                    <p><a href="nosotros.html" class="text-light text-decoration-none">Conócenos</a></p>
-                    <p><a href="proyectos.html" class="text-light text-decoration-none">Proyectos</a></p>
-                    <p><a href="contacto.html" class="text-light text-decoration-none">Contáctanos</a></p>
-                </div>
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold">Nuestras Redes</h5>
-                    <p><a href="#" class="text-light text-decoration-none">Instagram</a></p>
-                    <p><a href="#" class="text-light text-decoration-none">Tiktok</a></p>
-                    <p><a href="#" class="text-light text-decoration-none">Facebook</a></p>
+        <!-- Modal de Login -->
+        <div
+            class="modal fade"
+            id="loginModal"
+            tabindex="-1"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Acceso</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="./php/login.php" method="POST">
+                            <input
+                                type="hidden"
+                                name="current_page"
+                                value="../nosotros.html"
+                            />
+                            <h6 class="mb-3">Iniciar Sesión</h6>
+                            <div class="mb-3">
+                                <label for="username" class="form-label"
+                                    >Usuario</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="login-username"
+                                    name="username"
+                                    required
+                                />
+                                <div
+                                    id="login-error-username"
+                                    class="text-danger small mt-1"
+                                ></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label"
+                                    >Contraseña</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="login-password"
+                                    name="password"
+                                    required
+                                />
+                                <div
+                                    id="login-error-password"
+                                    class="text-danger small mt-1"
+                                ></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Ingresar
+                            </button>
+                        </form>
+                        <hr />
+                        <div class="text-center">
+                            <p class="mb-0">
+                                ¿No tienes cuenta?
+                                <a href="registro.html">Regístrate aquí</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>   
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="loginModalLabel">Acceso</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <form action="login.html" method="get">
-                <h6 class="mb-3">Iniciar Sesión</h6>
-                <div class="mb-3">
-                    <label for="username" class="form-label">Usuario</label>
-                    <input type="text" class="form-control" id="username" required>
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input type="password" class="form-control" id="password" required>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Ingresar</button>
-            </form>
-            <hr>
-            <div class="text-center">
-                 <p class="mb-0">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
+        <!-- Bootstrap JS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
+        <!-- Script para manejar errores de login -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginModalEl = document.getElementById("loginModal");
+                const urlParams = new URLSearchParams(window.location.search);
+                const error = urlParams.get("error");
+                const username = urlParams.get("username");
+
+                if (error) {
+                    // Si hay un error en la URL
+                    const loginModal = new bootstrap.Modal(loginModalEl);
+                    const usernameInput =
+                        document.getElementById("login-username");
+                    const errorUserDiv = document.getElementById(
+                        "login-error-username"
+                    );
+                    const errorPassDiv = document.getElementById(
+                        "login-error-password"
+                    );
+
+                    // Si nos devuelven un username, lo rellenamos
+                    if (username) {
+                        usernameInput.value = username;
+                    }
+
+                    // Mostramos el mensaje de error correspondiente
+                    if (error === "usuario_invalido") {
+                        errorUserDiv.textContent = "El usuario no existe.";
+                    } else if (error === "password_invalido") {
+                        errorPassDiv.textContent =
+                            "La contraseña es incorrecta.";
+                    } else if (error === "campos_vacios") {
+                        errorUserDiv.textContent =
+                            "Por favor, completa todos los campos.";
+                    }
+
+                    // Mostramos el modal para que el usuario vea el error
+                    loginModal.show();
+                }
+
+                // Limpiamos los errores cuando el modal se cierra
+                loginModalEl.addEventListener("hidden.bs.modal", function () {
+                    document.getElementById(
+                        "login-error-username"
+                    ).textContent = "";
+                    document.getElementById(
+                        "login-error-password"
+                    ).textContent = "";
+                });
+            });
+        </script>
+    </body>
 </html>

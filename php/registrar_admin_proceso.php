@@ -1,14 +1,26 @@
 <?php
+session_start();
+
+// ===== PASO DE SEGURIDAD CRÍTICO =====
+// Verificamos si el usuario ha iniciado sesión Y si su rol es 'superAdmin'.
+// Si no cumple, se detiene la ejecución inmediatamente.
+if (!isset($_SESSION['loggedin']) || $_SESSION['tipo_usuario'] !== 'superAdmin') {
+    // Puedes redirigir a una página de error o simplemente mostrar un mensaje.
+    die("Acceso denegado. No tienes permisos para realizar esta acción.");
+}
+
+// Si la verificación pasa, continuamos con el código de registro.
 include 'conexion.php';
 
+// El resto de este script es casi idéntico a tu registrar.php original,
+// pero confía en el 'userType' que le envía el formulario de admin.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // Lista de campos que son obligatorios (ya no incluye 'userType')
-    $campos_obligatorios = ['nombre', 'apellido', 'username', 'email', 'password'];
-    
+    $campos_obligatorios = ['nombre', 'apellido', 'username', 'email', 'password', 'userType'];
     foreach ($campos_obligatorios as $campo) {
         if (empty(trim($_POST[$campo]))) {
-            header("Location: ../registro.html?error=campos_vacios");
+            // Manejar error de campos vacíos (redirigiendo de vuelta)
+            header("Location: ../registro_admin.html?error=campos_vacios");
             exit();
         }
     }
@@ -19,16 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telefono = $_POST['telefono']; 
     $email = $_POST['email'];
     $password = $_POST['password'];
-    
-    // ===== CAMBIO DE SEGURIDAD CLAVE =====
-    // Asignamos el tipo de usuario directamente aquí, en el servidor.
-    // De esta forma, ignoramos cualquier dato que el usuario intente enviar.
-    $tipo_usuario = 'cliente';
-    // ===== FIN DEL CAMBIO DE SEGURIDAD =====
+    $tipo_usuario = $_POST['userType']; // Aquí será 'admin'
 
-    // --- El resto del código para verificar duplicados e insertar sigue exactamente igual ---
-
-    // Comprobamos si el email ya existe
+    // Aquí irían las mismas verificaciones de email/usuario duplicado que en registrar.php...
     $sql_check_email = "SELECT id FROM usuarios WHERE email = ?";
     $stmt_check_email = $conexion->prepare($sql_check_email);
     $stmt_check_email->bind_param("s", $email);
@@ -36,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_check_email->store_result();
 
     if ($stmt_check_email->num_rows > 0) {
-        header("Location: ../registro.html?error=email_existe");
+        header("Location: ../registro_admin.html?error=email_existe");
         exit();
     }
     $stmt_check_email->close();
@@ -49,23 +54,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_check_username->store_result();
 
     if ($stmt_check_username->num_rows > 0) {
-        header("Location: ../registro.html?error=usuario_existe");
+        header("Location: ../registro_admin.html?error=usuario_existe");
         exit();
     }
     $stmt_check_username->close();
-
-    // Procedemos con el registro
+    
     $password_hasheada = password_hash($password, PASSWORD_DEFAULT);
     $sql_insert = "INSERT INTO usuarios (nombre, apellido, username, telefono, email, password, tipo_usuario) VALUES (?, ?, ?, ?, ?, ?, ?)";
     $stmt_insert = $conexion->prepare($sql_insert);
-    // La 's' final corresponde a $tipo_usuario
     $stmt_insert->bind_param("sssssss", $nombre, $apellido, $username, $telefono, $email, $password_hasheada, $tipo_usuario);
 
     if ($stmt_insert->execute()) {
-        header("Location: ../index.html?registro=exitoso");
+        // Redirigir al panel de admin con un mensaje de éxito
+        header("Location: ../superAdminPanel.html?registro=exitoso");
         exit();
     } else {
-        header("Location: ../registro.html?error=desconocido");
+        header("Location: ../registro_admin.html?error=desconocido");
         exit();
     }
     

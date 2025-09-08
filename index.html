@@ -1,257 +1,646 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoRaíces | Inicio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">EcoRaíces</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Conócenos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="nosotros.html">Sobre Nosotros</a></li>
-                            <li><a class="dropdown-item" href="proyectos.html">Nuestros Proyectos</a></li>
-                            <li><a class="dropdown-item" href="galeria.html">Galería</a></li>
-                        </ul>
-                    </li>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>EcoRaíces | Inicio</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Aprende
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./restauracionEcologica_learn.html">Restauración Ecológica</a></li>
-                            <li><a class="dropdown-item" href="./rehabilitacionDeFauna.html">Rehabilitación de Fauna</a></li>
-                        </ul>
-                    </li>
+    <!-- Script para manejar sesión y mostrar enlaces según el tipo de usuario -->
+    <script src="assets/js/sessionManager.js"></script>
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <button class="btn btn-outline-light ms-lg-3" data-bs-toggle="modal" data-bs-target="#loginModal">Acceder</button>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
-        <div class="container">
-            <h1 class="display-3 fw-bold">¡Donde nacen las raíces florecen los cambios!</h1>
-            <p class="lead">Protegemos la biodiversidad de Colombia a través de la acción comunitaria y la educación ambiental.</p>
-            
-            <a href="./contacto.html" class="btn btn-primary btn-lg mt-4">Haz una donación</a>
-        </div>
-    </header>
-        
-    <main>
-        <section class="container my-5">
-            <h2 class="text-center mb-5">¿A qué nos dedicamos?</h2>
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <a href="proyectos.html" class="card-link">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/images/Reforestacion.jpg" class="card-img-top" alt="Reforestación Comunitaria">
-                            <div class="card-body">
-                                <h5 class="card-title">Reforestación Comunitaria</h5>
-                                <p class="card-text">EcoRaíces organiza jornadas de siembra de árboles nativos en zonas degradadas, involucrando a comunidades locales y escuelas rurales. Estas acciones restauran ecosistemas y fortalecen el vínculo entre las personas y su territorio.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <a href="proyectos.html" class="card-link">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/images/FaunaSilvestre.jpg" class="card-img-top" alt="Rescate de Fauna">
-                            <div class="card-body">
-                                <h5 class="card-title">Rescate y Rehabilitación de Fauna Silvestre</h5>
-                                <p class="card-text">La ONG colabora con centros de recuperación para animales heridos o víctimas del tráfico ilegal. Su labor se enfoca en la atención veterinaria, rehabilitación y liberación responsable de fauna silvestre.                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <a href="proyectos.html" class="card-link">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/images/EducacionAmbiental.jpg" class="card-img-top" alt="Educación Ambiental">
-                            <div class="card-body">
-                                <h5 class="card-title">Educación Ambiental Interactiva</h5>
-                                <p class="card-text">EcoRaíces diseña talleres educativos para niños, jóvenes y comunidades utilizando juegos, excursiones y charlas como herramientas para fomentar el respeto por la biodiversidad y la conciencia ecológica.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <a href="proyectos.html" class="card-link">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/images/Ecosistema.jpg" class="card-img-top" alt="Custodia de ecosistemas">
-                            <div class="card-body">
-                                <h5 class="card-title">Custodia de Ecosistemas Estratégicos</h5>
-                                <p class="card-text">La organización establece acuerdos con propietarios rurales para proteger bosques, fuentes hídricas y corredores ecológicos. Incluye monitoreo ambiental, compensaciones verdes y asesoría técnica.</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <a href="proyectos.html" class="card-link">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/images/MonitoreoBiodiversidad.jpg" class="card-img-top" alt="Monitoreo de biodiversidad">
-                            <div class="card-body">
-                                <h5 class="card-title">Monitoreo Participativo de la Biodiversidad</h5>
-                                <p class="card-text">Capacitamos a voluntarios para registrar especies, evaluar cambios ambientales y detectar contaminantes. Esta labor fortalece la ciencia ciudadana y alimenta sistemas de conservación con datos confiables.</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <a href="proyectos.html" class="card-link">
-                        <div class="card h-100 shadow-sm">
-                            <img src="assets/images/IncidenciaPoltica.jpg" class="card-img-top" alt="Incidencia política y legal">
-                            <div class="card-body">
-                                <h5 class="card-title">Incidencia Política y Legal Verde</h5>
-                                <p class="card-text">EcoRaíces lidera campañas para fortalecer leyes de protección ambiental y derechos animales. Brinda asesoría jurídica a comunidades que defienden sus territorios frente a amenazas ecológicas.</div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="text-center mt-5">
-                <a href="proyectos.html" class="btn btn-primary btn-lg">Conoce Todos Nuestros Proyectos</a>
-            </div>
-        </section>
-        <section class="container my-5">
-
-            <div class="row align-items-center py-5">
-                <div class="col-lg-6">
-                    <h2 class="mb-3">Algo más acerca de nuestro objetivo</h2>
-                    <p>EcoRaíces trabaja por la protección integral de la biodiversidad, promoviendo la restauración ecológica, el respeto por todas las formas de vida y la reconexión consciente entre la humanidad y su entorno natural. Su propósito se fundamenta en impulsar un cambio sostenible desde las raíces —priorizando la educación ambiental, la recuperación de ecosistemas y la defensa activa de la fauna silvestre.</p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="assets/images/SobreNosotrosBrujula.jpg" class="img-fluid rounded" alt="Brújula sobre un tronco en la naturaleza">
-                </div>
-            </div>
-
-            <div class="row align-items-center py-5">
-                <div class="col-lg-6">
-                    <img src="assets/images/Compromiso.jpg" class="img-fluid rounded" alt="Ilustración de una mano sosteniendo el planeta">
-                </div>
-                <div class="col-lg-6">
-                    <h2 class="mb-3">Compromisos de EcoRaíces</h2>
-                    <p>Nuestra ONG asume el compromiso firme de actuar frente a la emergencia climática y las amenazas que enfrentan los ecosistemas, adoptando prácticas transparentes, éticas y participativas. Se compromete a involucrar activamente a las comunidades en sus procesos, capacitar ciudadanos para la ciencia y promover políticas públicas que garanticen la conservación de la vida.</p>
-                </div>
-            </div>
-            
-        </section>
-
-        <section class="bg-light py-5">
+    <body>
+        <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary">
             <div class="container">
-                <h2 class="text-center mb-4">Nuestros Aliados</h2>
-                <div class="row text-center">
-                    <div class="col-6 col-md-4 col-lg-2"><img src="assets/images/logo_1.png" class="img-fluid" alt="Logo Aliado"></div>
-                    <div class="col-6 col-md-4 col-lg-2"><img src="assets/images/logo_2.jpg" class="img-fluid" alt="Logo Aliado"></div>
-                    <div class="col-6 col-md-4 col-lg-2"><img src="assets/images/logo_3.png" class="img-fluid" alt="Logo Aliado"></div>
-                    <div class="col-6 col-md-4 col-lg-2"><img src="assets/images/logo_4.png" class="img-fluid" alt="Logo Aliado"></div>
-                    <div class="col-6 col-md-4 col-lg-2"><img src="assets/images/logo_5.jpg" class="img-fluid" alt="Logo Aliado"></div>
-                    <div class="col-6 col-md-4 col-lg-2"><img src="assets/images/logo_6.png" class="img-fluid" alt="Logo Aliado"></div>
+                <a class="navbar-brand fw-bold" href="index.html">EcoRaíces</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Conócenos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="nosotros.html"
+                                        >Sobre Nosotros</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="proyectos.html"
+                                        >Nuestros Proyectos</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="galeria.html"
+                                        >Galería</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a
+                                class="nav-link dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                Aprende
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="./restauracionEcologica_learn.html"
+                                        >Restauración Ecológica</a
+                                    >
+                                </li>
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        href="./rehabilitacionDeFauna.html"
+                                        >Rehabilitación de Fauna</a
+                                    >
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html"
+                                >Contacto</a
+                            >
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </section>
-    </main>
+        </nav>
 
-    <footer class="bg-dark text-light pt-5 pb-4">
-        <div class="container text-center text-md-start">
-            <div class="row">
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold text-primary">EcoRaíces</h5>
-                    <p>EcoRaíces es una organización sin ánimo de lucro dedicada a proteger la biodiversidad colombiana mediante acciones concretas de restauración, educación ambiental y defensa de la fauna silvestre. Creemos que el cambio sostenible comienza en lo profundo: en las raíces de nuestras comunidades, del territorio y de nuestra conciencia ecológica.</p>
+        <header
+            class="hero-section text-center text-white d-flex align-items-center justify-content-center"
+        >
+            <div class="container">
+                <h1 class="display-3 fw-bold">
+                    ¡Donde nacen las raíces florecen los cambios!
+                </h1>
+                <p class="lead">
+                    Protegemos la biodiversidad de Colombia a través de la
+                    acción comunitaria y la educación ambiental.
+                </p>
+
+                <a href="./contacto.html" class="btn btn-primary btn-lg mt-4"
+                    >Haz una donación</a
+                >
+            </div>
+        </header>
+
+        <main>
+            <section class="container my-5">
+                <h2 class="text-center mb-5">¿A qué nos dedicamos?</h2>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="proyectos.html" class="card-link">
+                            <div class="card h-100 shadow-sm">
+                                <img
+                                    src="assets/images/Reforestacion.jpg"
+                                    class="card-img-top"
+                                    alt="Reforestación Comunitaria"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Reforestación Comunitaria
+                                    </h5>
+                                    <p class="card-text">
+                                        EcoRaíces organiza jornadas de siembra
+                                        de árboles nativos en zonas degradadas,
+                                        involucrando a comunidades locales y
+                                        escuelas rurales. Estas acciones
+                                        restauran ecosistemas y fortalecen el
+                                        vínculo entre las personas y su
+                                        territorio.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="proyectos.html" class="card-link">
+                            <div class="card h-100 shadow-sm">
+                                <img
+                                    src="assets/images/FaunaSilvestre.jpg"
+                                    class="card-img-top"
+                                    alt="Rescate de Fauna"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Rescate y Rehabilitación de Fauna
+                                        Silvestre
+                                    </h5>
+                                    <p class="card-text">
+                                        La ONG colabora con centros de
+                                        recuperación para animales heridos o
+                                        víctimas del tráfico ilegal. Su labor se
+                                        enfoca en la atención veterinaria,
+                                        rehabilitación y liberación responsable
+                                        de fauna silvestre.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="proyectos.html" class="card-link">
+                            <div class="card h-100 shadow-sm">
+                                <img
+                                    src="assets/images/EducacionAmbiental.jpg"
+                                    class="card-img-top"
+                                    alt="Educación Ambiental"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Educación Ambiental Interactiva
+                                    </h5>
+                                    <p class="card-text">
+                                        EcoRaíces diseña talleres educativos
+                                        para niños, jóvenes y comunidades
+                                        utilizando juegos, excursiones y charlas
+                                        como herramientas para fomentar el
+                                        respeto por la biodiversidad y la
+                                        conciencia ecológica.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="proyectos.html" class="card-link">
+                            <div class="card h-100 shadow-sm">
+                                <img
+                                    src="assets/images/Ecosistema.jpg"
+                                    class="card-img-top"
+                                    alt="Custodia de ecosistemas"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Custodia de Ecosistemas Estratégicos
+                                    </h5>
+                                    <p class="card-text">
+                                        La organización establece acuerdos con
+                                        propietarios rurales para proteger
+                                        bosques, fuentes hídricas y corredores
+                                        ecológicos. Incluye monitoreo ambiental,
+                                        compensaciones verdes y asesoría
+                                        técnica.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="proyectos.html" class="card-link">
+                            <div class="card h-100 shadow-sm">
+                                <img
+                                    src="assets/images/MonitoreoBiodiversidad.jpg"
+                                    class="card-img-top"
+                                    alt="Monitoreo de biodiversidad"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Monitoreo Participativo de la
+                                        Biodiversidad
+                                    </h5>
+                                    <p class="card-text">
+                                        Capacitamos a voluntarios para registrar
+                                        especies, evaluar cambios ambientales y
+                                        detectar contaminantes. Esta labor
+                                        fortalece la ciencia ciudadana y
+                                        alimenta sistemas de conservación con
+                                        datos confiables.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="proyectos.html" class="card-link">
+                            <div class="card h-100 shadow-sm">
+                                <img
+                                    src="assets/images/IncidenciaPoltica.jpg"
+                                    class="card-img-top"
+                                    alt="Incidencia política y legal"
+                                />
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Incidencia Política y Legal Verde
+                                    </h5>
+                                    <p class="card-text">
+                                        EcoRaíces lidera campañas para
+                                        fortalecer leyes de protección ambiental
+                                        y derechos animales. Brinda asesoría
+                                        jurídica a comunidades que defienden sus
+                                        territorios frente a amenazas
+                                        ecológicas.
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold">Acceso rápido</h5>
-                    <p><a href="nosotros.html" class="text-light text-decoration-none">Conócenos</a></p>
-                    <p><a href="proyectos.html" class="text-light text-decoration-none">Proyectos</a></p>
-                    <p><a href="contacto.html" class="text-light text-decoration-none">Contáctanos</a></p>
+                <div class="text-center mt-5">
+                    <a href="proyectos.html" class="btn btn-primary btn-lg"
+                        >Conoce Todos Nuestros Proyectos</a
+                    >
                 </div>
-                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 fw-bold">Nuestras Redes</h5>
-                    <p><a href="#" class="text-light text-decoration-none">Instagram</a></p>
-                    <p><a href="#" class="text-light text-decoration-none">Tiktok</a></p>
-                    <p><a href="#" class="text-light text-decoration-none">Facebook</a></p>
+            </section>
+            <section class="container my-5">
+                <div class="row align-items-center py-5">
+                    <div class="col-lg-6">
+                        <h2 class="mb-3">
+                            Algo más acerca de nuestro objetivo
+                        </h2>
+                        <p>
+                            EcoRaíces trabaja por la protección integral de la
+                            biodiversidad, promoviendo la restauración
+                            ecológica, el respeto por todas las formas de vida y
+                            la reconexión consciente entre la humanidad y su
+                            entorno natural. Su propósito se fundamenta en
+                            impulsar un cambio sostenible desde las raíces
+                            —priorizando la educación ambiental, la recuperación
+                            de ecosistemas y la defensa activa de la fauna
+                            silvestre.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img
+                            src="assets/images/SobreNosotrosBrujula.jpg"
+                            class="img-fluid rounded"
+                            alt="Brújula sobre un tronco en la naturaleza"
+                        />
+                    </div>
+                </div>
+
+                <div class="row align-items-center py-5">
+                    <div class="col-lg-6">
+                        <img
+                            src="assets/images/Compromiso.jpg"
+                            class="img-fluid rounded"
+                            alt="Ilustración de una mano sosteniendo el planeta"
+                        />
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="mb-3">Compromisos de EcoRaíces</h2>
+                        <p>
+                            Nuestra ONG asume el compromiso firme de actuar
+                            frente a la emergencia climática y las amenazas que
+                            enfrentan los ecosistemas, adoptando prácticas
+                            transparentes, éticas y participativas. Se
+                            compromete a involucrar activamente a las
+                            comunidades en sus procesos, capacitar ciudadanos
+                            para la ciencia y promover políticas públicas que
+                            garanticen la conservación de la vida.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-light py-5">
+                <div class="container">
+                    <h2 class="text-center mb-4">Nuestros Aliados</h2>
+                    <div class="row text-center">
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img
+                                src="assets/images/logo_1.png"
+                                class="img-fluid"
+                                alt="Logo Aliado"
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img
+                                src="assets/images/logo_2.jpg"
+                                class="img-fluid"
+                                alt="Logo Aliado"
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img
+                                src="assets/images/logo_3.png"
+                                class="img-fluid"
+                                alt="Logo Aliado"
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img
+                                src="assets/images/logo_4.png"
+                                class="img-fluid"
+                                alt="Logo Aliado"
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img
+                                src="assets/images/logo_5.jpg"
+                                class="img-fluid"
+                                alt="Logo Aliado"
+                            />
+                        </div>
+                        <div class="col-6 col-md-4 col-lg-2">
+                            <img
+                                src="assets/images/logo_6.png"
+                                class="img-fluid"
+                                alt="Logo Aliado"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-dark text-light pt-5 pb-4">
+            <div class="container text-center text-md-start">
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold text-primary">
+                            EcoRaíces
+                        </h5>
+                        <p>
+                            EcoRaíces es una organización sin ánimo de lucro
+                            dedicada a proteger la biodiversidad colombiana
+                            mediante acciones concretas de restauración,
+                            educación ambiental y defensa de la fauna silvestre.
+                            Creemos que el cambio sostenible comienza en lo
+                            profundo: en las raíces de nuestras comunidades, del
+                            territorio y de nuestra conciencia ecológica.
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold">
+                            Acceso rápido
+                        </h5>
+                        <p>
+                            <a
+                                href="nosotros.html"
+                                class="text-light text-decoration-none"
+                                >Conócenos</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="proyectos.html"
+                                class="text-light text-decoration-none"
+                                >Proyectos</a
+                            >
+                        </p>
+                        <p>
+                            <a
+                                href="contacto.html"
+                                class="text-light text-decoration-none"
+                                >Contáctanos</a
+                            >
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                        <h5 class="text-uppercase mb-4 fw-bold">
+                            Nuestras Redes
+                        </h5>
+                        <p>
+                            <a href="#" class="text-light text-decoration-none"
+                                >Instagram</a
+                            >
+                        </p>
+                        <p>
+                            <a href="#" class="text-light text-decoration-none"
+                                >Tiktok</a
+                            >
+                        </p>
+                        <p>
+                            <a href="#" class="text-light text-decoration-none"
+                                >Facebook</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal de Login -->
+        <div
+            class="modal fade"
+            id="loginModal"
+            tabindex="-1"
+            aria-labelledby="loginModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Acceso</h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="./php/login.php" method="POST">
+                            <input
+                                type="hidden"
+                                name="current_page"
+                                value="../index.html"
+                            />
+                            <h6 class="mb-3">Iniciar Sesión</h6>
+                            <div class="mb-3">
+                                <label for="username" class="form-label"
+                                    >Usuario</label
+                                >
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    id="login-username"
+                                    name="username"
+                                    required
+                                />
+                                <div
+                                    id="login-error-username"
+                                    class="text-danger small mt-1"
+                                ></div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label"
+                                    >Contraseña</label
+                                >
+                                <input
+                                    type="password"
+                                    class="form-control"
+                                    id="login-password"
+                                    name="password"
+                                    required
+                                />
+                                <div
+                                    id="login-error-password"
+                                    class="text-danger small mt-1"
+                                ></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">
+                                Ingresar
+                            </button>
+                        </form>
+                        <hr />
+                        <div class="text-center">
+                            <p class="mb-0">
+                                ¿No tienes cuenta?
+                                <a href="registro.html">Regístrate aquí</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </footer>
 
-    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Acceso</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="login.html" method="get">
-                    <h6 class="mb-3">Iniciar Sesión</h6>
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" id="username" required>
+        <!-- Modal de Éxito en Registro -->
+        <div
+            class="modal fade"
+            id="successModal"
+            tabindex="-1"
+            aria-labelledby="successModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="successModalLabel">
+                            ¡Registro Exitoso!
+                        </h5>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
                     </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Contraseña</label>
-                        <input type="password" class="form-control" id="password" required>
+                    <div class="modal-body">
+                        <p>
+                            Tu cuenta ha sido creada correctamente. ¡Bienvenido
+                            a EcoRaíces!
+                        </p>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
-                    </form>
-                    <hr>
-                    <div class="text-center">
-                        <p class="mb-0">¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#loginModal"
+                        >
+                            Iniciar Sesión
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="successModalLabel">¡Registro Exitoso!</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Tu cuenta ha sido creada correctamente. ¡Bienvenido a EcoRaíces!</p> 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">
-                    Iniciar Sesión
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- Bootstrap JS Bundle con Popper - CSS -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- Script para mostrar el modal de éxito en registro -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const urlParams = new URLSearchParams(window.location.search);
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            
-            if (urlParams.get('registro') === 'exitoso') {
-                // ¡CAMBIO AQUÍ! Ahora mostramos el modal de éxito.
-                var successModal = new bootstrap.Modal(document.getElementById('successModal'));
-                successModal.show();
-            }
-        });
-    </script>
-</body>
+                if (urlParams.get("registro") === "exitoso") {
+                    var successModal = new bootstrap.Modal(
+                        document.getElementById("successModal")
+                    );
+                    successModal.show();
+                }
+            });
+        </script>
+
+        <!-- Script para manejar errores de login y rellenar campos -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginModalEl = document.getElementById("loginModal");
+                const urlParams = new URLSearchParams(window.location.search);
+                const error = urlParams.get("error");
+                const username = urlParams.get("username");
+
+                if (error) {
+                    // Si hay un error en la URL
+                    const loginModal = new bootstrap.Modal(loginModalEl);
+                    const usernameInput =
+                        document.getElementById("login-username");
+                    const errorUserDiv = document.getElementById(
+                        "login-error-username"
+                    );
+                    const errorPassDiv = document.getElementById(
+                        "login-error-password"
+                    );
+
+                    // Si nos devuelven un username, lo rellenamos
+                    if (username) {
+                        usernameInput.value = username;
+                    }
+
+                    // Mostramos el mensaje de error correspondiente
+                    if (error === "usuario_invalido") {
+                        errorUserDiv.textContent = "El usuario no existe.";
+                    } else if (error === "password_invalido") {
+                        errorPassDiv.textContent =
+                            "La contraseña es incorrecta.";
+                    } else if (error === "campos_vacios") {
+                        errorUserDiv.textContent =
+                            "Por favor, completa todos los campos.";
+                    }
+
+                    // Mostramos el modal para que el usuario vea el error
+                    loginModal.show();
+                }
+
+                // Limpiamos los errores cuando el modal se cierra
+                loginModalEl.addEventListener("hidden.bs.modal", function () {
+                    document.getElementById(
+                        "login-error-username"
+                    ).textContent = "";
+                    document.getElementById(
+                        "login-error-password"
+                    ).textContent = "";
+                });
+            });
+        </script>
+
+    </body>
 </html>
