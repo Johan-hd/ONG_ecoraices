@@ -24,6 +24,7 @@ db name:  `ecoraices_db`.
 
 db query: 
 
+```sql
 CREATE TABLE usuarios (
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
@@ -35,12 +36,14 @@ CREATE TABLE usuarios (
     tipo_usuario ENUM('cliente', 'admin', 'superAdmin') NOT NULL DEFAULT 'cliente',
     fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 -- 
 
 SUPER ADMIN CREDENTIALS: 
 
 HASHED pass to db: $2y$10$6Ox1QGAWBupBNbXo99cTlOBl4c/FODajC.wm3XGcIFZ/jFboDwuLK
+
 pass: super123
+
 user: superadmin
 
