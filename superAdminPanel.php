@@ -1,3 +1,7 @@
+<?php 
+require_once 'php/auth.php'; 
+check_authentication(['superAdmin']); 
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -80,14 +84,14 @@
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href="./restauracionEcologica_learn.html"
+                                        href="./restauracionEcologica_learn.php"
                                         >Restauración Ecológica</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href="./rehabilitacionDeFauna.html"
+                                        href="./rehabilitacionDeFauna.php"
                                         >Rehabilitación de Fauna</a
                                     >
                                 </li>
@@ -123,7 +127,7 @@
                                 Crear una nueva cuenta con permisos de
                                 administrador.
                             </p>
-                            <a href="registro_admin.html" class="btn btn-primary"
+                            <a href="registro_admin.php" class="btn btn-primary"
                                 >Ir a Registro</a
                             >
                         </div>
@@ -137,7 +141,7 @@
                                 Modificar o eliminar cuentas de administrador
                                 existentes.
                             </p>
-                            <a href="editar_admins.html" class="btn btn-secondary"
+                            <a href="editar_admins.php" class="btn btn-secondary"
                                 >Ir a Edición</a
                             >
                         </div>

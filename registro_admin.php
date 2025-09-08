@@ -1,3 +1,7 @@
+<?php 
+require_once 'php/auth.php'; 
+check_authentication(['superAdmin']); 
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -78,14 +82,14 @@
                             <li>
                                 <a
                                     class="dropdown-item"
-                                    href="./restauracionEcologica_learn.html"
+                                    href="./restauracionEcologica_learn.php"
                                     >Restauración Ecológica</a
                                 >
                             </li>
                             <li>
                                 <a
                                     class="dropdown-item"
-                                    href="./rehabilitacionDeFauna.html"
+                                    href="./rehabilitacionDeFauna.php"
                                     >Rehabilitación de Fauna</a
                                 >
                             </li>

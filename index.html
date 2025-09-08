@@ -84,14 +84,14 @@
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href="./restauracionEcologica_learn.html"
+                                        href="restauracionEcologica_learn.php"
                                         >Restauración Ecológica</a
                                     >
                                 </li>
                                 <li>
                                     <a
                                         class="dropdown-item"
-                                        href="./rehabilitacionDeFauna.html"
+                                        href="./rehabilitacionDeFauna.php"
                                         >Rehabilitación de Fauna</a
                                     >
                                 </li>
@@ -624,6 +624,9 @@
                     } else if (error === "campos_vacios") {
                         errorUserDiv.textContent =
                             "Por favor, completa todos los campos.";
+                    } else if (error === 'login_required') { 
+                        // Mostramos el aviso en el campo del usuario
+                        errorUserDiv.textContent = 'Necesitas iniciar sesión para ver esta página.'; 
                     }
 
                     // Mostramos el modal para que el usuario vea el error

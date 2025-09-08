@@ -11,12 +11,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 2. Verificamos si recibimos la página actual desde el formulario.
     if (isset($_POST['current_page']) && !empty($_POST['current_page'])) {
-        // 3. (Opcional pero recomendado) Una pequeña validación de seguridad
+        // 3. Una pequeña validación de seguridad
         // para asegurar que solo redirigimos a páginas locales.
         $allowed_pages = [
-            '../index.html', '../contacto.html', '../galeria.html', 
-            '../nosotros.html', '../proyectos.html', '../registro.html',
-            '../restauracionEcologica_learn.html', '../rehabilitacionDeFauna.html'
+            // Páginas hmtl
+            '../index.html', 
+            '../contacto.html', 
+            '../galeria.html', 
+            '../nosotros.html', 
+            '../proyectos.html', 
+            '../registro.html',
+
+            // Páginas .php 
+            '../superAdminPanel.php',
+            '../registro_admin.php',
+            '../editar_admins.php',
+            '../gestionar_clientes.php',
+            '../perfil.php',
+            '../restauracionEcologica_learn.php', 
+            '../rehabilitacionDeFauna.php'
         ];
         if (in_array($_POST['current_page'], $allowed_pages)) {
             $redirect_url = $_POST['current_page'];

@@ -20,11 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
     
-    // ===== CAMBIO DE SEGURIDAD CLAVE =====
     // Asignamos el tipo de usuario directamente aquí, en el servidor.
     // De esta forma, ignoramos cualquier dato que el usuario intente enviar.
     $tipo_usuario = 'cliente';
-    // ===== FIN DEL CAMBIO DE SEGURIDAD =====
 
     // --- El resto del código para verificar duplicados e insertar sigue exactamente igual ---
 

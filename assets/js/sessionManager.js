@@ -21,13 +21,27 @@ document.addEventListener("DOMContentLoaded", function () {
             if (data.loggedin) {
                 // --- El usuario SÍ ha iniciado sesión ---
 
+                // 0. Añadir el botón "Mi Perfil" para TODOS los usuarios logueados
+                const profileLink = document.createElement('li');
+                profileLink.className = 'nav-item';
+                profileLink.innerHTML = '<a class="nav-link" href="perfil.php">Mi Perfil</a>';
+                navbarNav.appendChild(profileLink);
+
                 // 1. Si es 'superAdmin', añadimos el botón de Administración
                 if (data.userType === 'superAdmin') {
                     const adminLink = document.createElement('li');
                     adminLink.className = 'nav-item';
-                    adminLink.innerHTML = '<a class="nav-link fw-bold text-warning" href="superAdminPanel.html">Administración</a>';
+                    adminLink.innerHTML = '<a class="nav-link fw-bold text-warning" href="superAdminPanel.php">Administración</a>';
                     // Lo insertamos dentro de la lista de navegación (<ul>)
                     navbarNav.appendChild(adminLink);
+                }
+
+                // 1.2 Si es 'admin' O 'superAdmin', muestra el panel de clientes
+                if (data.userType === 'admin' || data.userType === 'superAdmin') {
+                    const clientLink = document.createElement('li');
+                    clientLink.className = 'nav-item';
+                    clientLink.innerHTML = '<a class="nav-link" href="gestionar_clientes.php">Gestionar Clientes</a>';
+                    navbarNav.appendChild(clientLink);
                 }
 
                 // 2. Creamos el saludo y el botón de "Salir"
