@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($campos_obligatorios as $campo) {
         if (empty(trim($_POST[$campo]))) {
             // Manejar error de campos vacíos (redirigiendo de vuelta)
-            header("Location: ../registro_admin.html?error=campos_vacios");
+            header("Location: ../registro_admin.php?error=campos_vacios");
             exit();
         }
     }
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_check_email->store_result();
 
     if ($stmt_check_email->num_rows > 0) {
-        header("Location: ../registro_admin.html?error=email_existe");
+        header("Location: ../registro_admin.php?error=email_existe");
         exit();
     }
     $stmt_check_email->close();
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_check_username->store_result();
 
     if ($stmt_check_username->num_rows > 0) {
-        header("Location: ../registro_admin.html?error=usuario_existe");
+        header("Location: ../registro_admin.php?error=usuario_existe");
         exit();
     }
     $stmt_check_username->close();
@@ -66,10 +66,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($stmt_insert->execute()) {
         // Redirigir al panel de admin con un mensaje de éxito
-        header("Location: ../superAdminPanel.html?registro=exitoso");
+        header("Location: ../superAdminPanel.php?registro=exitoso");
         exit();
     } else {
-        header("Location: ../registro_admin.html?error=desconocido");
+        header("Location: ../registro_admin.php?error=desconocido");
         exit();
     }
     
