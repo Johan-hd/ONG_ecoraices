@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             <td>${admin.nombre} ${admin.apellido}</td>
                             <td>${admin.email}</td>
                             <td>
+                                <a href="editar_admin_form.php?id=${admin.id}" class="btn btn-primary btn-sm">
+                                    Editar
+                                </a>
                                 <button class="btn btn-danger btn-sm delete-btn" data-id="${admin.id}" data-username="${admin.username}">
                                     Eliminar
                                 </button>

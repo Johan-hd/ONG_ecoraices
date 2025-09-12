@@ -20,7 +20,7 @@ Este es el repositorio del sitio web para EcoRaíces, una organización ficticia
 
 ## Creación de la Base de Datos
 
-db name:  `ecoraices_db`.
+db name:  `ecoraices`.
 
 db query: 
 
